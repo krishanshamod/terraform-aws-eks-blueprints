@@ -89,7 +89,7 @@ resource "kubernetes_role" "team" {
   rule {
     api_groups = ["*"]
     resources  = ["configmaps", "pods", "podtemplates", "secrets", "serviceaccounts", "services", "deployments", "horizontalpodautoscalers", "networkpolicies", "statefulsets", "replicasets"]
-    verbs      = ["get", "list", "watch"]
+    verbs      = ["get", "list", "watch", "create", "update", "delete"]
   }
   rule {
     api_groups = ["*"]
